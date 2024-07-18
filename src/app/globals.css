@@ -17,17 +17,22 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-800 p-4 text-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+button {
+  @apply rounded-md bg-gray-400 px-6 py-2 font-semibold text-black hover:opacity-50 disabled:from-gray-700 disabled:to-gray-700 disabled:text-white disabled:opacity-50;
+}
+
+input[type="text"] {
+  @apply rounded-md border-2 border-gray-700 bg-gray-700 px-2 py-1 text-white shadow-lg outline-none;
+}
+
+ul {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(230, 228, 225);
+  min-height: 400px;
+  min-width: 100%;
+  color: black;
 }
